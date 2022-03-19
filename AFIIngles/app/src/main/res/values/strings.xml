@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="vogais_text">VOGAIS</string>
+    <string name="consoantes_text">CONSOANTES</string>
+</resources>
