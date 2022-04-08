@@ -21,13 +21,13 @@ class MainActivity : AppCompatActivity() {
 
         viewPager2.adapter=adapter
 
-        TabLayoutMediator(tabLayout,viewPager2){tab,position->
+        TabLayoutMediator(tabLayout, viewPager2){tab,position->
             when(position){
                 0->{
-                    tab.text="Vogais"
+                    tab.text="VOGAIS"
                 }
                 1->{
-                    tab.text="Consoantes"
+                    tab.text="CONSOANTES"
                 }
             }
         }.attach()

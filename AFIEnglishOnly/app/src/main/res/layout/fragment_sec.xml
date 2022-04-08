@@ -21,7 +21,7 @@
             android:paddingRight="4dp">
 
             <Button
-                android:id="@+id/button12"
+                android:id="@+id/btnVc01Id"
                 style="@android:style/Widget.Holo.Button.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -55,7 +55,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/button12"
+                app:layout_constraintStart_toEndOf="@+id/btnVc01Id"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
                 app:layout_constraintVertical_bias="0.0" />
 
@@ -120,7 +120,7 @@
                 app:layout_constraintVertical_bias="0.0" />
 
             <Button
-                android:id="@+id/button17"
+                android:id="@+id/btnVc06Id"
                 style="@android:style/Widget.Holo.Button.Small"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -155,7 +155,7 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toEndOf="@+id/button17"
+                app:layout_constraintStart_toEndOf="@+id/btnVc06Id"
                 app:layout_constraintTop_toBottomOf="@+id/textView3"
                 app:layout_constraintVertical_bias="0.0" />
 
@@ -174,7 +174,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/button12"
+                app:layout_constraintTop_toBottomOf="@+id/btnVc01Id"
                 app:layout_constraintVertical_bias="0.0"
                 tools:ignore="TouchTargetSizeCheck" />
 
@@ -305,38 +305,38 @@
                 android:id="@+id/textView3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_card_corner"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
-                android:text="CONSOANTES SONORAS"
+                android:text="Sonoras"
                 android:textColor="#FFFFFF"
-                android:textSize="30dp"
-                android:textStyle="bold"
+                android:textSize="26dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.047" />
+                app:layout_constraintVertical_bias="0.001" />
 
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/rounded_card_corner"
                 android:paddingLeft="2dp"
                 android:paddingRight="2dp"
                 android:shadowColor="#FFFFFF"
-                android:text="CONSOANTES MUDAS"
+                android:text="Mudas"
                 android:textColor="#FFFFFF"
-                android:textSize="30dp"
-                android:textStyle="bold"
+                android:textSize="26dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button500"
-                app:layout_constraintVertical_bias="0.077" />
+                app:layout_constraintVertical_bias="0.0" />
 
             <Button
                 android:id="@+id/button2"

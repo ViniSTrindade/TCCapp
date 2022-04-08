@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">AFI English Only</string>
+    <string name="underline"><u>Curtas</u></string>
 </resources>
