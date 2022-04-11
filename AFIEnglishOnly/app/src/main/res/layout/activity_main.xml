@@ -10,11 +10,11 @@
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tab_layout"
-        style="@style/Widget.MaterialComponents.TabLayout.Colored"
+        style="@style/Widget.MaterialComponents.TabLayout.PrimarySurface"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:tabIndicatorColor="@color/red_700"
-        app:tabTextAppearance="@style/TextAppearance.AppCompat.Large"
+        app:tabTextAppearance="@style/TextAppearance.AppCompat.Medium"
         app:tabTextColor="@color/white" />
 
     <androidx.viewpager2.widget.ViewPager2
