@@ -1,22 +1,24 @@
 package com.vinicius.myapplication.afienglishonly.fragments
 
+import android.media.MediaPlayer
+import android.net.Uri
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
-import android.util.Log
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
-import android.view.View.OnClickListener
 import android.view.ViewGroup
 import android.widget.Button
-import android.widget.TextView
+import android.widget.SeekBar
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.vinicius.myapplication.R
-import java.util.*
+import kotlin.time.Duration.Companion.seconds
 
 
-class VogaisFragment : Fragment(), OnClickListener {
+class VogaisFragment : Fragment() {
     private val TAG = "MyActivity"
-    lateinit var textView: TextView
+//    lateinit var textView: TextView
     lateinit var pegaTexto: String
 
     lateinit var btnVc1: Button
@@ -42,7 +44,7 @@ class VogaisFragment : Fragment(), OnClickListener {
     lateinit var btnDt7: Button
     lateinit var btnDt8: Button
 
-    lateinit var tts: TextToSpeech
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -78,14 +80,12 @@ class VogaisFragment : Fragment(), OnClickListener {
         btnDt7 = vista.findViewById(R.id.btnDt7)
         btnDt8 = vista.findViewById(R.id.btnDt8)
 
-        textView = vista.findViewById(R.id.displayVogais)
-
-        clickListeners()
+//        textView = vista.findViewById(R.id.displayVogais)
 
         return vista
     }
 
-    private fun clickListeners()
+    /*    private fun clickListeners()
     {
         btnVc1.setOnClickListener(this)
         btnVc2.setOnClickListener(this)
@@ -109,9 +109,9 @@ class VogaisFragment : Fragment(), OnClickListener {
         btnDt6.setOnClickListener(this)
         btnDt7.setOnClickListener(this)
         btnDt8.setOnClickListener(this)
-    }
+    }*/
 
-    override fun onClick(v: View?) {
+    /*override fun onClick(v: View?) {
 
         when (v?.getId()) {
             R.id.btnVc1 -> {
@@ -218,16 +218,6 @@ class VogaisFragment : Fragment(), OnClickListener {
                 textView.setText(pegaTexto)
                 reproduzirFonema()
             }
-        }
-    }
+        }*/
 
-    fun reproduzirFonema() {
-        tts = TextToSpeech(this.context, TextToSpeech.OnInitListener {
-            if (it == TextToSpeech.SUCCESS) {
-                tts.language = Locale.UK
-                tts.setSpeechRate(1.0f)
-                tts.speak(pegaTexto.toString(), TextToSpeech.QUEUE_ADD, null)
-            }
-        })
-    }
 }
