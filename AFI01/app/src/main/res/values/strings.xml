@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">AFI 01</string>
+<!--    Vogais Curtas-->
+    <string name="vc_ɪ">ɪ</string>
+    <string name="vc_e">e</string>
+    <string name="vc_ʊ">ʊ</string>
+    <string name="vc_ɒ">ɒ</string>
+    <string name="vc_ʌ">ʌ</string>
+    <string name="vc_æ">æ</string>
+    <string name="vc_ə">ə</string>
+<!--    Vogais Longas-->
+    <string name="vl_ɑː">ɑː</string>
+    <string name="vl_iː">iː</string>
+    <string name="vl_uː">uː</string>
+    <string name="vl_ɜː">ɜː</string>
+    <string name="vl_ɔː">ɔː</string>
+<!--    Ditongos-->
+    <string name="dt_aɪ">aɪ</string>
+    <string name="dt_eɪ">eɪ</string>
+    <string name="dt_eə">eə</string>
+    <string name="dt_əʊ">əʊ</string>
+    <string name="dt_ɪə">ɪə</string>
+    <string name="dt_aʊ">aʊ</string>
+    <string name="dt_ɔɪ">ɔɪ</string>
+    <string name="dt_ʊə">ʊə</string>
+<!--    Consoantes Sonoras-->
+    <string name="cs_b">b</string>
+    <string name="cs_d">d</string>
+    <string name="cs_g">g</string>
+    <string name="cs_v">v</string>
+    <string name="cs_z">z</string>
+    <string name="cs_ʒ">ʒ</string>
+    <string name="cs_dʒ">dʒ</string>
+    <string name="cs_ð">ð</string>
+    <string name="cs_m">m</string>
+    <string name="cs_n">n</string>
+    <string name="cs_ŋ">ŋ</string>
+    <string name="cs_l">l</string>
+    <string name="cs_r">r</string>
+    <string name="cs_j">j</string>
+    w<!--    Consoantes Mudas-->
+    <string name="cm_p">p</string>
+    <string name="cm_t">t</string>
+    <string name="cm_k">k</string>
+    <string name="cm_f">f</string>
+    <string name="cm_s">s</string>
+    <string name="cm_ʃ">ʃ</string>
+    <string name="cm_tʃ">tʃ</string>
+    <string name="cm_θ">θ</string>
+    <string name="cm_h">h</string>
+
+
+</resources>
