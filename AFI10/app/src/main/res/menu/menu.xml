@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/perfil"
+        android:title="@string/settings"
+        app:showAsAction="ifRoom"/>
+
+    <item
+        android:id="@+id/action_done"
+        android:icon="@drawable/ic_about"
+        android:title="@string/about"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item
+        android:id="@+id/action_done"
+        android:icon="@drawable/ic_contato"
+        android:title="@string/done"
+        app:showAsAction="ifRoom|withText"/>
+<group/>
+</menu>

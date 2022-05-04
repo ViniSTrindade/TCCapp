@@ -73,10 +73,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         holder.textView.setText(array.get(pos).getName());
         holder.textView.setTextColor(Color.BLACK);
 
-        (int i=0; i <=10; i++){
-        }
-
-
         holder.textView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
