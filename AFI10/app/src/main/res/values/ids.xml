@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="excluir" type="id" />
+    <item name="cancelar" type="id" />
+    <item name="object1" type="id" />
+    <item name="object2" type="id" />
+    <item name="prox_id" type="id" />
+</resources>
