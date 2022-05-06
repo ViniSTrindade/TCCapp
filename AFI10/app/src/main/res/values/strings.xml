@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">AFI10</string>
+    <string name="st_about" />
+    <string name="st_professor" />
+    <string name="st_student" />
+    <string name="st_project" />
 </resources>

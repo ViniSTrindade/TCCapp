@@ -4,19 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    android:layout_margin="5dp"
+    android:layout_margin="2dp"
     app:cardCornerRadius="5dp"
     app:cardElevation="5dp"
-    app:contentPadding="10dp">
+    app:contentPadding="0dp">
 
         <TextView
             android:id="@+id/recycler_view_itens"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:drawableTint="@color/black"
             android:gravity="center"
             android:text="TextView"
-            android:textSize="20dp"
+            android:textSize="25dp"
             android:textAlignment="center"/>
 
 
