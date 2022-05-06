@@ -32,6 +32,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     int selectedPosition=-1;
     MediaPlayer mediaPlayer;
 
+
     private static long DURACAO = 0;
     private static final String TAG = "MyActivity";
 
@@ -73,7 +74,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         int pos = position;
         TrackModel track = array.get(pos);
         holder.textView.setText(array.get(pos).getName());
-//        holder.textView.setTextColor(Color.BLACK);
+        holder.textView.setTextColor(Color.BLACK);
 
         switch (pos) {
             case 3: {
@@ -111,56 +112,56 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         else { }
 
         if (pos >=0 && pos <=2){
-            holder.textView.setBackgroundColor(Color.YELLOW);
+            holder.textView.setBackgroundColor(Color.parseColor("#FCE4EC"));
         }
         else if (pos >=6 && pos <=8){
-            holder.textView.setBackgroundColor(Color.YELLOW);
+            holder.textView.setBackgroundColor(Color.parseColor("#FCE4EC"));
         }
         else if (pos == 12){
-            holder.textView.setBackgroundColor(Color.YELLOW);
+            holder.textView.setBackgroundColor(Color.parseColor("#FCE4EC"));
         }
         else if (pos >=4 && pos <=5){
-            holder.textView.setBackgroundColor(Color.GREEN);
+            holder.textView.setBackgroundColor(Color.parseColor("#A5D6A7"));
         }
         else if (pos >=10 && pos <=11){
-            holder.textView.setBackgroundColor(Color.GREEN);
+            holder.textView.setBackgroundColor(Color.parseColor("#A5D6A7"));
         }
         else if (pos ==17){
-            holder.textView.setBackgroundColor(Color.GREEN);
+            holder.textView.setBackgroundColor(Color.parseColor("#A5D6A7"));
         }
         else if (pos >=24 && pos <=26){
-            holder.textView.setBackgroundColor(Color.LTGRAY);
+            holder.textView.setBackgroundColor(Color.parseColor("#D7CCC8"));
         }
         else if (pos >=30 && pos <=32){
-            holder.textView.setBackgroundColor(Color.LTGRAY);
+            holder.textView.setBackgroundColor(Color.parseColor("#D7CCC8"));
         }
         else if (pos >=36 && pos <=37){
-            holder.textView.setBackgroundColor(Color.LTGRAY);
+            holder.textView.setBackgroundColor(Color.parseColor("#D7CCC8"));
         }
         else if (pos >=28 && pos <=29){
-            holder.textView.setBackgroundColor(Color.BLUE);
+            holder.textView.setBackgroundColor(Color.parseColor("#4FC3F7"));
         }
         else if (pos >=34 && pos <=35){
-            holder.textView.setBackgroundColor(Color.BLUE);
+            holder.textView.setBackgroundColor(Color.parseColor("#4FC3F7"));
         }
         else if (pos >=40 && pos <=41){
-            holder.textView.setBackgroundColor(Color.BLUE);
+            holder.textView.setBackgroundColor(Color.parseColor("#4FC3F7"));
         }
         else if (pos >=45 && pos <=47){
-            holder.textView.setBackgroundColor(Color.BLUE);
+            holder.textView.setBackgroundColor(Color.parseColor("#4FC3F7"));
         }
         else if (pos >=48 && pos <=49){
-            holder.textView.setBackgroundColor(Color.RED);
+            holder.textView.setBackgroundColor(Color.parseColor("#FF8A65"));
         }
         else if (pos >=54 && pos <=66){
-            holder.textView.setBackgroundColor(Color.RED);
+            holder.textView.setBackgroundColor(Color.parseColor("#FF8A65"));
         }
         else{}
 
         holder.textView.setOnClickListener(new View.OnClickListener() {
                     @Override
-                    public void onClick(View view) {
-//                        holder.textView.setTextColor(Color.BLACK);
+                    public void onClick(View v) {
+
                         if (mediaPlayer != null) {
                             if (mediaPlayer.isPlaying()) {
                                 mediaPlayer.stop();
@@ -174,18 +175,17 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                                 mediaPlayer.stop();
                                 mediaPlayer.reset();
                                 track.setPlaying(false);
-                            } else {
+                            }
+                            else {
                                 mediaPlayer.start();
                                 DURACAO = mediaPlayer.getDuration();
-
-                                view.postDelayed(new Runnable() {
+                                v.setEnabled(false);
+                                v.postDelayed(new Runnable() {
                                     @Override
                                     public void run() {
-                                        view.setEnabled(true);
+                                        v.setEnabled(true);
                                     }
                                 }, DURACAO);
-                                view.setEnabled(false);
-                                holder.textView.setTextColor(Color.BLACK);
                             }
                         } catch (Exception e) {
                             Log.e("Exception", e.getMessage());

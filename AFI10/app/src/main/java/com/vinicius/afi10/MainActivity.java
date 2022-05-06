@@ -129,5 +129,15 @@ public class MainActivity extends AppCompatActivity {
         lista.setAdapter(adapter);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        array.remove(array);
+    }
 
+    @Override
+    protected void onPause() {
+        super.onPause();
+        lista.setEnabled(false);
+    }
 }
