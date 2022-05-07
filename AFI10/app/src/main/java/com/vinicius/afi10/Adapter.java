@@ -1,80 +1,39 @@
 package com.vinicius.afi10;
 
-import android.content.Context;
 import android.graphics.Color;
-import android.icu.text.Transliterator;
-import android.media.MediaPlayer;
-import android.opengl.Visibility;
-import android.os.Handler;
-import android.util.Log;
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-
-import androidx.appcompat.view.menu.MenuView;
 import androidx.recyclerview.widget.RecyclerView;
-
 import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
-
-    ArrayList<TrackModel> array = new ArrayList<TrackModel>();
+    private ArrayList<TrackModel> mFonemas = new ArrayList<TrackModel>();
+    private OnFonemaClickListener mOnFonemaClickListener;
     View view;
     ViewHolder viewHolder;
-    Context context;
     private int position;
     int selectedPosition=-1;
-    MediaPlayer mediaPlayer;
 
+//    private static final String TAG = "MyActivity";
 
-    private static long DURACAO = 0;
-    private static final String TAG = "MyActivity";
-
-    public Adapter(Context contextRecebido, ArrayList<TrackModel> lista) {
-        context = contextRecebido;
-        array = lista;
-    }
-
-
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener {
-        public TextView textView;
-
-        public ViewHolder(View itemView) {
-            super(itemView);
-
-            textView = itemView.findViewById(R.id.recycler_view_itens);
-            itemView.setOnCreateContextMenuListener(this);
-        }
-
-        @Override
-        public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
-            //Função 1 = Excluir texto
-            //Função 2 = Cancelar Menu
-            contextMenu.add(Menu.NONE, R.id.excluir, Menu.NONE, "Excluir");
-            contextMenu.add(Menu.NONE, R.id.cancelar, Menu.NONE, "Cancelar");
-        }
+    public Adapter(ArrayList<TrackModel> fonemas, OnFonemaClickListener onFonemaClickListener) {
+        mFonemas = fonemas;
+        this.mOnFonemaClickListener = onFonemaClickListener;
     }
 
     @Override
-    public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        view = LayoutInflater.from(context).inflate(R.layout.recycler_itens_view, parent,false);
-        viewHolder = new ViewHolder(view);
+    public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
+        view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.recycler_itens_view, viewGroup,false);
+        viewHolder = new ViewHolder(view, mOnFonemaClickListener);
         return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(Adapter.ViewHolder holder, int position){
-
         int pos = position;
-        TrackModel track = array.get(pos);
-        holder.textView.setText(array.get(pos).getName());
-        holder.textView.setTextColor(Color.BLACK);
+        holder.textView.setText(mFonemas.get(pos).getName());
 
         switch (pos) {
             case 3: {
@@ -158,63 +117,116 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         }
         else{}
 
-        holder.textView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
 
-                        if (mediaPlayer != null) {
-                            if (mediaPlayer.isPlaying()) {
-                                mediaPlayer.stop();
-                                mediaPlayer.reset();
-                                track.setPlaying(false);
-                            }
-                        }
-                        try {
-                            mediaPlayer = MediaPlayer.create(context, track.getId());
-                            if (mediaPlayer.isPlaying()) {
-                                mediaPlayer.stop();
-                                mediaPlayer.reset();
-                                track.setPlaying(false);
-                            }
-                            else {
-                                mediaPlayer.start();
-                                DURACAO = mediaPlayer.getDuration();
-                                v.setEnabled(false);
-                                v.postDelayed(new Runnable() {
-                                    @Override
-                                    public void run() {
-                                        v.setEnabled(true);
-                                    }
-                                }, DURACAO);
-                            }
-                        } catch (Exception e) {
-                            Log.e("Exception", e.getMessage());
-                        }
-                    }
-                });
-
-        holder.textView.setOnLongClickListener(new View.OnLongClickListener() {
+       /* holder.textView.setOnLongClickListener(new View.OnLongClickListener() {
             @Override
             public boolean onLongClick(View view) {
                 setPosicao(holder.getAdapterPosition());
                 return  false;
             }
-        });
+        });*/
     }
 
     @Override
     public int getItemCount() {
-        return array.size();
+        return mFonemas.size();
     }
 
-    private int posicao;
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        TextView textView;
+        OnFonemaClickListener onFonemaClickListener;
+
+        public ViewHolder(View itemView, OnFonemaClickListener onFonemaClickListener) {
+            super(itemView);
+            textView = itemView.findViewById(R.id.recycler_view_itens);
+            this.onFonemaClickListener = onFonemaClickListener;
+            itemView.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View view) {
+            onFonemaClickListener.onFonemaClick(getAdapterPosition());
+
+                this.textView.setBackgroundColor(this.textView.getHighlightColor());
+
+            this.textView.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    if (getAdapterPosition() >=0 && getAdapterPosition() <=2){
+                        textView.setBackgroundColor(Color.parseColor("#FCE4EC"));
+                    }
+                    else if (getAdapterPosition() >=6 && getAdapterPosition() <=8){
+                        textView.setBackgroundColor(Color.parseColor("#FCE4EC"));
+                    }
+                    else if (getAdapterPosition() == 12){
+                        textView.setBackgroundColor(Color.parseColor("#FCE4EC"));
+                    }
+                    else if (getAdapterPosition() >=4 && getAdapterPosition() <=5){
+                        textView.setBackgroundColor(Color.parseColor("#A5D6A7"));
+                    }
+                    else if (getAdapterPosition() >=10 && getAdapterPosition() <=11){
+                        textView.setBackgroundColor(Color.parseColor("#A5D6A7"));
+                    }
+                    else if (getAdapterPosition() ==17){
+                        textView.setBackgroundColor(Color.parseColor("#A5D6A7"));
+                    }
+                    else if (getAdapterPosition() >=24 && getAdapterPosition() <=26){
+                        textView.setBackgroundColor(Color.parseColor("#D7CCC8"));
+                    }
+                    else if (getAdapterPosition() >=30 && getAdapterPosition() <=32){
+                        textView.setBackgroundColor(Color.parseColor("#D7CCC8"));
+                    }
+                    else if (getAdapterPosition() >=36 && getAdapterPosition() <=37){
+                        textView.setBackgroundColor(Color.parseColor("#D7CCC8"));
+                    }
+                    else if (getAdapterPosition() >=28 && getAdapterPosition() <=29){
+                        textView.setBackgroundColor(Color.parseColor("#4FC3F7"));
+                    }
+                    else if (getAdapterPosition() >=34 && getAdapterPosition() <=35){
+                        textView.setBackgroundColor(Color.parseColor("#4FC3F7"));
+                    }
+                    else if (getAdapterPosition() >=40 && getAdapterPosition() <=41){
+                        textView.setBackgroundColor(Color.parseColor("#4FC3F7"));
+                    }
+                    else if (getAdapterPosition() >=45 && getAdapterPosition() <=47){
+                        textView.setBackgroundColor(Color.parseColor("#4FC3F7"));
+                    }
+                    else if (getAdapterPosition() >=48 && getAdapterPosition() <=49){
+                        textView.setBackgroundColor(Color.parseColor("#FF8A65"));
+                    }
+                    else if (getAdapterPosition() >=54 && getAdapterPosition() <=66){
+                        textView.setBackgroundColor(Color.parseColor("#FF8A65"));
+                    }
+                    else{}
+
+                }
+            }, 700);
+
+        }
+
+        /*@Override
+        public void onCreateContextMenu(ContextMenu contextMenu, View view, ContextMenu.ContextMenuInfo contextMenuInfo) {
+            //Função 1 = Excluir texto
+            //Função 2 = Cancelar Menu
+            contextMenu.add(Menu.NONE, R.id.excluir, Menu.NONE, "Excluir");
+            contextMenu.add(Menu.NONE, R.id.cancelar, Menu.NONE, "Cancelar");
+        }*/
+    }
+
+
+
+   /* private int posicao;
     public int getPosicao() {
         return posicao;
     }
 
     public void setPosicao(int posicao) {
         this.posicao = posicao;
-    }
+    }*/
 
+    public interface OnFonemaClickListener{
+        void onFonemaClick(int position);
+    }
 }
 

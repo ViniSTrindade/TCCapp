@@ -21,5 +21,4 @@
             android:textStyle="bold"
             android:textAlignment="center"/>
 
-
 </androidx.cardview.widget.CardView>
