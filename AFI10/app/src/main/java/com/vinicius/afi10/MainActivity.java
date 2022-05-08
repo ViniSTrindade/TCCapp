@@ -46,19 +46,19 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
 
     private void insereAfiObj(){
 //       Fonemas
-        mFonemas.add(new TrackModel(R.raw.audio_vc3, "e", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc4, "ɒ", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc5, "ə", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_ɛ, "ɛ", false));
+        mFonemas.add(new TrackModel(R.raw., "ɒ", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_ə, "ə", false));
         mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc6, "ɑː", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "iː", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "ʊ", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "ʌ", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "æ", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_ɑ, "ɑː", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_i, "iː", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_ʊ, "ʊ", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_ʌ, "ʌ", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_æ, "æ", false));
         mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "uː", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "ɜː", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "ɪ", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_u, "uː", false));
+        mFonemas.add(new TrackModel(R.raw., "ɜː", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_ɪ, "ɪ", false));
         mFonemas.add(new TrackModel(0, "", false));
         mFonemas.add(new TrackModel(0, "", false));
         mFonemas.add(new TrackModel(0, "", false));
@@ -70,8 +70,8 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
         mFonemas.add(new TrackModel(0, "", false));
         mFonemas.add(new TrackModel(0, "", false));
         mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "aɪ", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "eɪ", false));
+        mFonemas.add(new TrackModel(R.raw., "aɪ", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_eɪ, "eɪ", false));
         mFonemas.add(new TrackModel(R.raw.audio_vc7, "eə", false));
         mFonemas.add(new TrackModel(0, "", false));
         mFonemas.add(new TrackModel(R.raw.audio_vc7, "p", false));
@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
         mFonemas.add(new TrackModel(R.raw.audio_vc7, "g", false));
         mFonemas.add(new TrackModel(R.raw.audio_vc7, "v", false));
         mFonemas.add(new TrackModel(R.raw.audio_vc7, "z", false));
-        mFonemas.add(new TrackModel(R.raw.audio_vc7, "ʒ", false));
+        mFonemas.add(new TrackModel(R.raw., "ʒ", false));
         mFonemas.add(new TrackModel(R.raw.audio_vc7, "dʒ", false));
         mFonemas.add(new TrackModel(R.raw.audio_vc7, "ð", false));
         mFonemas.add(new TrackModel(R.raw.audio_vc7, "m", false));
