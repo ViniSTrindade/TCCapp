@@ -163,6 +163,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
     @Override
     public void onDestroy() {
         super.onDestroy();
+        clearApplicationData();
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying()) {
                mediaPlayer.release();
