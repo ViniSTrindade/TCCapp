@@ -48,57 +48,57 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
         mFonemas.add(new TrackModel(R.raw.fonema_e, "e", false));
         mFonemas.add(new TrackModel(R.raw.fonema_adepontacabeca, "ɒ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_edepontacabeca, "ə", false));
-        mFonemas.add(new TrackModel(0, "", false));
+        mFonemas.add(new TrackModel(1, "null", false));
         mFonemas.add(new TrackModel(R.raw.fonema_adoispt, "ɑː", false));
         mFonemas.add(new TrackModel(R.raw.fonema_idoispt, "iː", false));
         mFonemas.add(new TrackModel(R.raw.fonema_uferradura, "ʊ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_vinvertido, "ʌ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_shwa, "æ", false));
-        mFonemas.add(new TrackModel(0, "", false));
+        mFonemas.add(new TrackModel(2, "null", false));
         mFonemas.add(new TrackModel(R.raw.fonema_udoispt, "uː", false));
         mFonemas.add(new TrackModel(R.raw.fonema_tresdoispts, "ɜː", false));
         mFonemas.add(new TrackModel(R.raw.fonema_imaiuscula, "ɪ", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
+        mFonemas.add(new TrackModel(3, "null", false));
+        mFonemas.add(new TrackModel(4, "null", false));
+        mFonemas.add(new TrackModel(5, "null", false));
+        mFonemas.add(new TrackModel(6, "null", false));
         mFonemas.add(new TrackModel(R.raw.fonema_cdepontacabecadoispt, "ɔː", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
+        mFonemas.add(new TrackModel(7, "null", false));
+        mFonemas.add(new TrackModel(8, "null", false));
+        mFonemas.add(new TrackModel(9, "null", false));
+        mFonemas.add(new TrackModel(10, "null", false));
+        mFonemas.add(new TrackModel(11, "null", false));
+        mFonemas.add(new TrackModel(12, "null", false));
         mFonemas.add(new TrackModel(R.raw.fonema_aimaiuscula, "aɪ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_eiditongo, "eɪ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_meianove, "eə", false));
-        mFonemas.add(new TrackModel(0, "", false));
+        mFonemas.add(new TrackModel(13, "null", false));
         mFonemas.add(new TrackModel(R.raw.fonema_p, "p", false));
         mFonemas.add(new TrackModel(R.raw.fonema_t, "t", false));
         mFonemas.add(new TrackModel(R.raw.fonema_edepontacabecaferradura, "əʊ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_iedepontacabeca, "ɪə", false));
         mFonemas.add(new TrackModel(R.raw.fonema_aferradura, "aʊ", false));
-        mFonemas.add(new TrackModel(0, "", false));
+        mFonemas.add(new TrackModel(14, "null", false));
         mFonemas.add(new TrackModel(R.raw.fonema_k, "k", false));
         mFonemas.add(new TrackModel(R.raw.fonema_f, "f", false));
         mFonemas.add(new TrackModel(R.raw.fonema_cdepontacabecai, "ɔɪ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_ferraduraedepontacabeca, "ʊə", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
+        mFonemas.add(new TrackModel(15, "null", false));
+        mFonemas.add(new TrackModel(16, "null", false));
         mFonemas.add(new TrackModel(R.raw.fonema_s, "s", false));
         mFonemas.add(new TrackModel(R.raw.fonema_sesticado, "ʃ", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
+        mFonemas.add(new TrackModel(17, "null", false));
+        mFonemas.add(new TrackModel(18, "null", false));
+        mFonemas.add(new TrackModel(19, "null", false));
         mFonemas.add(new TrackModel(R.raw.fonema_tsesticado, "tʃ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_omega, "θ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_h, "h", false));
         mFonemas.add(new TrackModel(R.raw.fonema_b, "b", false));
         mFonemas.add(new TrackModel(R.raw.fonema_d, "d", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(0, "", false));
+        mFonemas.add(new TrackModel(20, "null", false));
+        mFonemas.add(new TrackModel(21, "null", false));
+        mFonemas.add(new TrackModel(22, "null", false));
+        mFonemas.add(new TrackModel(23, "null", false));
         mFonemas.add(new TrackModel(R.raw.fonema_g, "g", false));
         mFonemas.add(new TrackModel(R.raw.fonema_v, "v", false));
         mFonemas.add(new TrackModel(R.raw.fonema_z, "z", false));
@@ -113,7 +113,6 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
         mFonemas.add(new TrackModel(R.raw.fonema_j, "j", false));
         mFonemas.add(new TrackModel(R.raw.fonema_w, "w", false));
 
-        mAdapter.notifyDataSetChanged();
     }
 
     private void estanciaRecyclerview() {
@@ -131,6 +130,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
 
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
                 mediaPlayer.reset();
                 track.setPlaying(false);
             }
@@ -138,6 +138,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
         try {
             mediaPlayer = MediaPlayer.create(this, track.getId());
             if (mediaPlayer.isPlaying()) {
+                mediaPlayer.pause();
                 mediaPlayer.reset();
                 track.setPlaying(false);
             }
@@ -145,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
                 mediaPlayer.start();
                 track.setPlaying(true);
             }
-        } catch (Exception e) {
+        } catch (Exception e){
             Log.e("Exception", e.getMessage());
         }
     }
@@ -163,7 +164,6 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
     @Override
     public void onDestroy() {
         super.onDestroy();
-        clearApplicationData();
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying()) {
                mediaPlayer.release();
