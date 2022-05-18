@@ -201,7 +201,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                     else{}
 
                 }
-            }, 700);
+            }, 100);
 
         }
 

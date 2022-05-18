@@ -1,6 +1,5 @@
 package com.vinicius.afi10;
 
-import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.util.Log;
@@ -51,12 +50,12 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
         mFonemas.add(new TrackModel(R.raw.fonema_edepontacabeca, "ə", false));
         mFonemas.add(new TrackModel(0, "", false));
         mFonemas.add(new TrackModel(R.raw.fonema_adoispt, "ɑː", false));
-        mFonemas.add(new TrackModel(R.raw.fonema_i2pt, "iː", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_idoispt, "iː", false));
         mFonemas.add(new TrackModel(R.raw.fonema_uferradura, "ʊ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_vinvertido, "ʌ", false));
         mFonemas.add(new TrackModel(R.raw.fonema_shwa, "æ", false));
         mFonemas.add(new TrackModel(0, "", false));
-        mFonemas.add(new TrackModel(R.raw.fonema_u2pt, "uː", false));
+        mFonemas.add(new TrackModel(R.raw.fonema_udoispt, "uː", false));
         mFonemas.add(new TrackModel(R.raw.fonema_tresdoispts, "ɜː", false));
         mFonemas.add(new TrackModel(R.raw.fonema_imaiuscula, "ɪ", false));
         mFonemas.add(new TrackModel(0, "", false));
@@ -132,16 +131,14 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
 
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
+                mediaPlayer.reset();
                 track.setPlaying(false);
             }
         }
         try {
             mediaPlayer = MediaPlayer.create(this, track.getId());
             if (mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
+                mediaPlayer.reset();
                 track.setPlaying(false);
             }
             else {
@@ -158,8 +155,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
         super.onPause();
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
+               mediaPlayer.reset();
             }
         }
     }
@@ -169,8 +165,7 @@ public class MainActivity extends AppCompatActivity implements Adapter.OnFonemaC
         super.onDestroy();
         if (mediaPlayer != null) {
             if (mediaPlayer.isPlaying()) {
-                mediaPlayer.stop();
-                mediaPlayer.release();
+               mediaPlayer.release();
             }
         }
     }
